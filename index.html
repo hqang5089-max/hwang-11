@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Unit Converter</title>
+    <title>스마트 단위 변환기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
-            <h1>Unit Converter</h1>
-            <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+            <h1>단위 변환기</h1>
+            <button id="theme-toggle" aria-label="다크/라이트 모드 전환">🌓</button>
         </header>
         <main>
             <div class="converter-container">
                 <div class="category-selector">
-                    <button class="cat-btn active" data-category="length">Length</button>
-                    <button class="cat-btn" data-category="weight">Weight</button>
-                    <button class="cat-btn" data-category="temperature">Temp</button>
+                    <button class="cat-btn active" data-category="length">길이</button>
+                    <button class="cat-btn" data-category="weight">무게</button>
+                    <button class="cat-btn" data-category="temperature">온도</button>
                 </div>
 
                 <div class="input-group">
-                    <input type="number" id="input-value" placeholder="Enter value" value="1">
-                    <select id="from-unit"></select>
+                    <label for="input-value">입력 값</label>
+                    <div class="field-row">
+                        <input type="number" id="input-value" placeholder="값을 입력하세요" value="1">
+                        <select id="from-unit"></select>
+                    </div>
                 </div>
 
                 <div class="equals">=</div>
 
                 <div class="input-group">
-                    <input type="number" id="output-value" readonly>
-                    <select id="to-unit"></select>
+                    <label for="output-value">변환 결과</label>
+                    <div class="field-row">
+                        <input type="text" id="output-value" readonly>
+                        <select id="to-unit"></select>
+                    </div>
                 </div>
             </div>
         </main>
