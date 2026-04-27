@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Smart Unit Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
-            <h1>Lotto Number Generator</h1>
+            <h1>Unit Converter</h1>
             <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
         </header>
         <main>
-            <div id="numbers-display"></div>
-            <button id="generate-btn">Generate Numbers</button>
+            <div class="converter-container">
+                <div class="category-selector">
+                    <button class="cat-btn active" data-category="length">Length</button>
+                    <button class="cat-btn" data-category="weight">Weight</button>
+                    <button class="cat-btn" data-category="temperature">Temp</button>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="input-value" placeholder="Enter value" value="1">
+                    <select id="from-unit"></select>
+                </div>
+
+                <div class="equals">=</div>
+
+                <div class="input-group">
+                    <input type="number" id="output-value" readonly>
+                    <select id="to-unit"></select>
+                </div>
+            </div>
         </main>
     </div>
     <script src="main.js"></script>
